@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/p/:id",
+      "destination": "/api/paste-view-ssr?id=:id"
+    }
+  ]
+}

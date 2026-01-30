@@ -14,7 +14,7 @@ export default function ViewPaste() {
       setError(null);
       setData(null);
       try {
-        const res = await apiFetch(`/pastes/${id}`);
+        const res = await apiFetch(`/api/pastes/${id}`);
         if (!cancelled) setData(res);
       } catch (err) {
         if (!cancelled) setError(err.status === 404 ? 'Paste not found' : err.message);

@@ -76,7 +76,7 @@ export default function CreatePaste() {
           <div className="success">
             Shareable link:{' '}
             <a href={result.url} target="_blank" rel="noreferrer">
-              {result.url}
+               {window.location.origin}/p/{result.id}
             </a>
           </div>
         )}

@@ -23,7 +23,7 @@ export default function CreatePaste() {
     setSubmitting(true);
 
     try {
-      const data = await apiFetch('/pastes', {
+      const data = await apiFetch('/api/pastes', {
         method: 'POST',
         body: JSON.stringify(payload)
       });

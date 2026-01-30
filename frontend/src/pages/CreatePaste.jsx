@@ -11,8 +11,8 @@ export default function CreatePaste() {
 
   const payload = useMemo(() => {
     const body = { content };
-    if (ttlSeconds !== '') body.ttl_seconds = ttlSeconds;
-    if (maxViews !== '') body.max_views = maxViews;
+    if (ttlSeconds !== '') body.ttl_seconds = Number(ttlSeconds);
+    if (maxViews !== '') body.max_views = Number(maxViews);
     return body;
   }, [content, ttlSeconds, maxViews]);
 
@@ -44,6 +44,7 @@ export default function CreatePaste() {
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder="Paste text here..."
+          required
         />
 
         <div className="row">
@@ -75,8 +76,8 @@ export default function CreatePaste() {
         {result?.url && (
           <div className="success">
             Shareable link:{' '}
-            <a href={result.url} target="_blank" rel="noreferrer">
-               {window.location.origin}/p/{result.id}
+            <a href={result.url} target="_blank" rel="noreferrer">             
+                  {result.url}
             </a>
           </div>
         )}

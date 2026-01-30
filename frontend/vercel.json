@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/p/:id",
-      "destination": "/api/paste-view-ssr?id=:id"
+      "source": "/p/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

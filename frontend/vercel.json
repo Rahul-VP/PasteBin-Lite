@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://YOUR-RENDER-APP.onrender.com/api/$1"
+      "destination": "https://pastebin-lite-rn5c.onrender.com/api/$1"
     },
     {
       "source": "/(.*)",
